@@ -12,9 +12,9 @@ class Warning extends Component {
 
     componentWillReceiveProps(nextProps){
         if(this.state.display){
-            this.state={
-              display: nextProps.display
-            }
+            this.setState ({
+              display: nextProps.display > this.props.display
+            })
         }
     }
 

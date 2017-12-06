@@ -30,7 +30,7 @@ class AdList extends Component {
       <ul className='network_list'
         onClick={()=>{
             this.setState({
-                display:false
+                display: false
             })
         }}
       >
