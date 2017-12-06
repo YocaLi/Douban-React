@@ -6,14 +6,14 @@ class Warning extends Component {
     constructor(props){
         super(props)
         this.state={
-          display:this.props.display
+          display: this.props.display
         }
     }
 
     componentWillReceiveProps(nextProps){
         if(this.state.display){
             this.state={
-              display:nextProps.display
+              display: nextProps.display
             }
         }
     }
@@ -24,8 +24,9 @@ class Warning extends Component {
 
           <span onClick={()=>{
               this.setState({
-                  display:!this.state.display
+                  display: !this.state.display
               })
+              console.log(this.props.uid);
             }}>
             <i className="iconfont icon-jubao"></i>
           </span>

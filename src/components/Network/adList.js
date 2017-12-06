@@ -19,8 +19,6 @@ class AdList extends Component {
 
       // exec 用于获取正则匹配的内容
       if (reg.exec(text) != null) {
-        console.log(matchUrl);
-        console.log(matchUrl[0]);
         var newText = text.replace(reg, "<a target='_self' href='"+matchUrl[0]+"' target='_blank'>"+ matchUrl[0]+"</a>");
       }
 
@@ -29,7 +27,13 @@ class AdList extends Component {
 
   render(){
     return (
-      <ul className='network_list'>
+      <ul className='network_list'
+        onClick={()=>{
+            this.setState({
+                display:false
+            })
+        }}
+      >
         {
           this.props.list.map((item, i) =>
             <li key = {i} className='first_li'>
@@ -86,7 +90,6 @@ class AdList extends Component {
 
                     <Warning
                       display = {this.state.display}
-                      visible = 'hidden'
                       uid = {item.status.id}
                       text = '举报'
                     />
