@@ -7,26 +7,9 @@ class AdList extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      clickProps:{
-        visible: 'hidden',
-        name: '举报'
-      }
+      display: false
     }
     this.formatUrl = this._formatUrl.bind(this);
-    this.handleClick = this._handleClick.bind(this);
-  }
-
-  // 点击举报
-  _handleClick() {
-    this.setState({
-      clickProps:{
-        visible: 'show',
-        name: '举报'
-      }
-    });
-    setTimeout(() => {
-      this.setState({ loading: false, visible: false });
-    }, 3000);
   }
 
   // 格式化文本链接
@@ -42,10 +25,6 @@ class AdList extends Component {
       }
 
       return newText;
-  }
-
-  componentDidUpdate() {
-
   }
 
   render(){
@@ -98,12 +77,20 @@ class AdList extends Component {
                     <span> <i className="iconfont icon-fenxiang1"></i> {item.status.reshares_count} </span>
                   </div>
                   <div>
-                    <span onClick={this.handleClick}> <i className="iconfont icon-jubao"></i> </span>
+
+                    {
+                      /*
+                        举报组件
+                      */
+                    }
+
                     <Warning
-                      visible={this.state.clickProps.visible}
-                      uid={item.status.id}
-                      text={this.state.clickProps.name}
+                      display = {this.state.display}
+                      visible = 'hidden'
+                      uid = {item.status.id}
+                      text = '举报'
                     />
+
                   </div>
                 </div>
 
