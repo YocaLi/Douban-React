@@ -1,0 +1,46 @@
+.cell_list {
+  padding: 0 .32rem .32rem .32rem;
+  .cell_title {
+    display: flex;
+    justify-content: space-between;
+    height: .88rem;
+    line-height: .88rem;
+    span {
+      &:last-child {
+        color: #42bd56;
+      }
+    }
+    i {
+      color: #969696;
+    }
+  }
+  .cell_goods {
+    overflow: hidden;
+    display: -webkit-box;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    li {
+      width: 2rem;
+      height: 3.48rem;
+      margin: 0 .1rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      img {
+        width: 2rem;
+        height: 2.8rem;
+      }
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        width: 100%;
+        line-height: .88rem;
+      }
+    }
+  }
+}

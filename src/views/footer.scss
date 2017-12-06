@@ -1,0 +1,34 @@
+.footer {
+  padding: .4rem 0;
+  text-align: center;
+  .footer_text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+      width: .96rem;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: .2rem;
+      span {
+        text-align: left;
+        &:first-child {
+          font-size: .48rem;
+        }
+        &:lase-child {
+
+        }
+      }
+    }
+  }
+  .footer_download {
+    margin-top: .2rem;
+    a {
+      color: #42bd56;
+      font-size: .36rem;
+    }
+  }
+}

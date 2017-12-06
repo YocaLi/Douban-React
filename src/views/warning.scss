@@ -1,0 +1,19 @@
+.button_warning {
+  background-color: #fff;
+  display: block;
+  height: .6rem;
+  padding: 0 .3rem;
+  line-height: .6rem;
+  border: 1px solid #dedede;
+  border-radius: .1rem;
+  color: #42bd56;
+  position: absolute;
+  right: 0;
+  bottom: .8rem;
+  &.btn-hidden {
+    display: none;
+  }
+  &.btn-show {
+    display: block;
+  }
+}
