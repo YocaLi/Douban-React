@@ -11,7 +11,7 @@ class Home extends Component {
       homeList: []
     }
   }
-  
+
   componentDidMount() {
     fetch('../../../list.json', {
         headers: {

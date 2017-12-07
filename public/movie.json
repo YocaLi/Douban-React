@@ -2,6 +2,7 @@
   "info":[
       {
           "title":"影院热映",
+          "style":"nowintheater",
           "arr":[
               {
                   "original_price": null,
@@ -217,6 +218,7 @@
       },
       {
           "title":"免费在线观影",
+          "style":"watchonline",
           "arr":[
               {
                   "original_price": null,
@@ -446,6 +448,7 @@
       },
       {
           "title":"新片速递",
+          "style":"latest",
           "arr":[
               {
                   "original_price": null,

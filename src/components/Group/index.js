@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import List from './list'
 import Footer from '../../views/footer'
 
 class Group extends Component {
@@ -20,6 +21,8 @@ class Group extends Component {
             console.log('Request successful', data.info);
             this.setState({
               groupList: data.info
+            },() => {
+              console.log(this.state.groupList);
             })
           }
         ).catch(function(error) {
@@ -29,6 +32,7 @@ class Group extends Component {
   render() {
     return (
       <div>
+        <List list = {this.state.groupList}/>
         <Footer text = '我们的精神角落'/>
       </div>
     )
