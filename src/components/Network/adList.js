@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Warning from '../../views/warning'
+
 import './network.scss'
 
 class AdList extends Component {

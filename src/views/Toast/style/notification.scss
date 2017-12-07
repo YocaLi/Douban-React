@@ -4,13 +4,13 @@
 
 $prefixCls: 'zby-notification';
 
+
 .#{$prefixCls}-box {
   position: fixed;
   left: 50%;
-  top: 30%;
-  width: 40%;
+  bottom: 0;
+  width: 50%;
   height: 300px;
-
   transform: translate3D(-50%, -50%, 0);
   z-index: 110;
 }
